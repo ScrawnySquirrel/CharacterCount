@@ -1,0 +1,9 @@
+Pass text file to Python script
+Convert all characters to lowercase
+Loop through English letters
+  Get character count for each English letter
+  Store in dictionary
+Get total character count of letters
+Calculate the relative distribution of letters
+Verify that sum of probability of letters equals 1 (100%)
+Output the dictionary to CSV file with format: letter,count

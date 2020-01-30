@@ -29,12 +29,13 @@ for chr in eng_alpha:
     char_dict[chr] = contents.count(chr)
     char_count += char_dict[chr]
 
-# Calculate relative probability and output data to CSV
+print("Dictionary:\nletter\tcount\tdistribution")
+# Calculate relative distribution and output data to CSV
 for chr in eng_alpha:
     rel_prob = float(char_dict[chr])/float(char_count)
     out_f.write("{},{},{}\n".format(chr,char_dict[chr], rel_prob))
+    print("{}\t{}\t{}".format(chr,char_dict[chr],rel_prob))
     rel_prob_sum += rel_prob
 
 print("Relative Probability: {}".format(rel_prob_sum))
-print("Dictionary: {}".format(char_dict))
 print("Character Count: {}".format(char_count))

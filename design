@@ -1,9 +1,21 @@
+Task 1: Get character Count
 Pass text file to Python script
 Convert all characters to lowercase
 Loop through English letters
   Get character count for each English letter
   Store in dictionary
-Get total character count of letters
-Calculate the relative distribution of letters
+Loop through the dictionary of letters
+  Sum total character count of letters
+  Calculate the relative distribution of letters
+  Output to CSV file
 Verify that sum of probability of letters equals 1 (100%)
-Output the dictionary to CSV file with format: letter,count
+Output the dictionary to CSV file with format: letter,count,probability
+
+Task 2: Get conditional probability
+Get both plaintext/ciphertext CSV (with probabilities) and letter to calculate
+Find the line in plaintext CSV with letter to calculate
+Loop through ciphertext CSV
+  Calculate conditional probability P(M=m|C=c)
+  Maintain the letter with probability closest to 1
+  Output to files
+Display result

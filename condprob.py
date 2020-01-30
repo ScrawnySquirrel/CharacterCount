@@ -45,8 +45,8 @@ for line in ct_f:
         min_line = line
     out_f.write("{},{},{},{},{}\n".format(orig_msg[0], ct[0], orig_msg[2], ct[2], condprob))
 
-out_f.write("\n")
-
 # Calculte distance of plaintext char and the matched ciphertext
 dist = abs(ord(orig_msg[0]) - ord(min_line[0]))
-print("Character {} is mapped to {} with the distance of {}".format(orig_msg[0], min_line[0], dist))
+result = "Character {} is mapped to {} with the distance of {}".format(orig_msg[0], min_line[0], dist)
+print(result)
+out_f.write(result + "\n\n")

@@ -15,6 +15,7 @@ if [[ -z $1 ]]; then
   done
 
   for j in {e,t,a,o,i,n}; do
+    echo "Letter: $j" >> csvfiles/aohf_condprob.csv
     python condprob.py -p csvfiles/aohf.csv -c csvfiles/aohf_ct3.csv -m $j -o csvfiles/aohf_condprob.csv
     python condprob.py -p csvfiles/pap.csv -c csvfiles/pap_ct7.csv -m $j -o csvfiles/pap_condprob.csv
   done

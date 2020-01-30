@@ -40,17 +40,18 @@ Similar to `charcount.py`, the `-o` flag is option and will display result to st
 ## Running the tests
 
 All the test data and results are provided in the `textfiles` folder. It contains 2 books:
-* Adventures of HUCKLEBERRY Finn By Mark Twain
+* Adventures of Huckleberry Finn By Mark Twain
 * Pride and Prejudice by Jane Austen
 
 For simplicity, a bash script is provided to get the relative distribution and conditional probability called `basic_execution.sh`.
 
-This script will use the provided `caesar.c` to generate the ciphertext file that will be stored in `textfiles` with `*_ct#.text` format.
+This script will use the provided `caesar.c` to generate the ciphertext file that will be stored in `textfiles` with `*_ct#.text` format based on the plaintext files in `textfiles`.
 
 When the ciphertext is generated, the script will generate CSV with character count and relative distribution using `charcount.py`.
-> The generated CSVs will be stored in the `csvfiles` directory.
 
 Afterwards, the genereated CSV from `charcount.py` will be used to calculate the the conditional probabilty and output the result as `*_condprob.csv`.
+
+> The generated CSVs will be stored in the `csvfiles` directory.
 
 ## Author
 

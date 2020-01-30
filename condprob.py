@@ -19,9 +19,9 @@ next(ct_f)
 
 # Create output CSV file
 if args.output is not None:
-    out_f = open(args.output, "w")
+    out_f = open(args.output, "a+")
 else:
-    out_f = open("condprob.csv", "w")
+    out_f = open("condprob.csv", "a+")
 out_f.write("M,C,P(M=m),P(C=c),P(M=m|C=c)\n")
 
 orig_msg = ""
@@ -32,7 +32,7 @@ for line in pt_f:
         orig_msg = line.rstrip().split(',')
         break
 
-# Loop through ciphertext file and calculate the condition probability
+# Loop through ciphertext file, calculate the condition probability, and output to CSV file
 prob_min = 12345
 min_line = []
 for line in ct_f:
@@ -45,7 +45,8 @@ for line in ct_f:
         min_line = line
     out_f.write("{},{},{},{},{}\n".format(orig_msg[0], ct[0], orig_msg[2], ct[2], condprob))
 
+out_f.write("\n")
+
 # Calculte distance of plaintext char and the matched ciphertext
 dist = abs(ord(orig_msg[0]) - ord(min_line[0]))
-
 print("Character {} is mapped to {} with the distance of {}".format(orig_msg[0], min_line[0], dist))

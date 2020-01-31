@@ -22,6 +22,6 @@ if [[ -z $1 ]]; then
 elif [[ $1 == "-c" ]]; then
   # Clean up
   rm caesar.out
-  rm textfiles/aohf_ct3.txt textfiles/pap_ct7.txt
+  rm textfiles/aohf_ct3.txt textfiles/pap_ct5.txt
   rm csvfiles/*
 fi

@@ -53,6 +53,8 @@ Afterwards, the genereated CSV from `charcount.py` will be used to calculate the
 
 > The generated CSVs will be stored in the `csvfiles` directory.
 
+> The generated files can be cleaned up using ./bash_execution.sh -c
+
 ## Author
 
 **Gabriel Lee** - [ScrawnySquirrel](https://github.com/ScrawnySquirrel)
